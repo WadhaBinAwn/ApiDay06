@@ -1,8 +1,8 @@
-package Day5.controller;
+package org.example.controller;
 
-import Day5.dao.JobDAO;
+import org.example.dao.JobDAO;
 import jakarta.ws.rs.*;
-import Day5.models.Jobs;
+import org.example.models.Jobs;
 
 
 import java.util.ArrayList;

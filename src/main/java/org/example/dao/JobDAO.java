@@ -1,13 +1,13 @@
-package Day5.dao;
+package org.example.dao;
 
-import Day5.models.Jobs;
+import org.example.models.Jobs;
 
 import java.sql.*;
 import java.util.ArrayList;
 
 public class JobDAO {
 
-    private static final String URL = "jdbc:sqlite:D:\\Private\\SDAIA\\SDAIA Java Course\\JavaBasics\\src\\main\\java\\day4\\hr.db";
+    private static final String URL = "jdbc:sqlite:C:\\Users\\dev\\IdeaProjects\\HrApiDay05\\src\\main\\resources\\hr.db";
     private static final String SELECT_ALL_JOBS = "select * from jobs";
     private static final String SELECT_ONE_JOB = "select * from jobs where job_id = ?";
     private static final String INSERT_JOB = "insert into jobs values (?, ?, ?, ?)";

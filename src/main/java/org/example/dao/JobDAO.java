@@ -25,6 +25,9 @@ public class JobDAO {
         st.executeUpdate();
     }
 
+
+
+
     public void updateJob(Jobs j) throws SQLException, ClassNotFoundException {
         Class.forName("org.sqlite.JDBC");
         Connection conn = DriverManager.getConnection(URL);

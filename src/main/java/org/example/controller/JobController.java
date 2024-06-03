@@ -13,6 +13,8 @@ public class JobController {
 
    JobDAO dao = new JobDAO();
 
+
+
     @GET
     public ArrayList<Jobs> getAllJobs() {
 

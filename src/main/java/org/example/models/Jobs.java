@@ -34,6 +34,8 @@ public class Jobs {
                 '}';
     }
 
+
+
     public int getJob_id() {
         return job_id;
     }

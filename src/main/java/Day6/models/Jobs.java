@@ -1,4 +1,4 @@
-package Day6.example.models;
+package Day6.models;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

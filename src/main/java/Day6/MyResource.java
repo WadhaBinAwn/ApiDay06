@@ -1,4 +1,4 @@
-package Day6.example;
+package Day6;
 
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.Context;

@@ -1,9 +1,9 @@
-package Day6.example.controller;
+package Day6.controller;
 
+import Day6.dao.JobDAO;
 import jakarta.ws.rs.core.MediaType;
-import Day6.example.dao.JobDAO;
 import jakarta.ws.rs.*;
-import Day6.example.models.Jobs;
+import Day6.models.Jobs;
 
 
 import java.util.ArrayList;

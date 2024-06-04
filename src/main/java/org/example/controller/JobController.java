@@ -1,5 +1,6 @@
 package org.example.controller;
 
+import jakarta.ws.rs.core.MediaType;
 import org.example.dao.JobDAO;
 import jakarta.ws.rs.*;
 import org.example.models.Jobs;
@@ -16,10 +17,15 @@ public class JobController {
 
 
     @GET
-    public ArrayList<Jobs> getAllJobs() {
+    @Produces({MediaType.APPLICATION_XML,MediaType.APPLICATION_JSON})
+
+    public ArrayList<Jobs> getAllJobs(  @QueryParam("min_salary") Double min_salary,
+                                        @QueryParam("limit") Integer limit,
+                                        @QueryParam("offset") int offset) {
+
 
         try {
-            return dao.selectAllJobs();
+            return dao.selectAllJobs(min_salary,limit,offset);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

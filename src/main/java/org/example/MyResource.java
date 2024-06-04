@@ -30,6 +30,7 @@ public class MyResource {
             {
 
 
+
                 System.out.println(headers.getDate());
                 System.out.println(headers.getLanguage());
                 System.out.println(headers.getMediaType());

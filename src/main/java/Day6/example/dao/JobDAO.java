@@ -1,6 +1,6 @@
-package org.example.dao;
+package Day6.example.dao;
 
-import org.example.models.Jobs;
+import Day6.example.models.Jobs;
 
 import java.sql.*;
 import java.util.ArrayList;

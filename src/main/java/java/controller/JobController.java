@@ -1,10 +1,10 @@
-package Day6.controller;
+package java.controller;
 
-import Day6.dao.JobDAO;
-import dto.JobsFilterDto;
+import java.dao.JobDAO;
+import java.dto.JobsFilterDto;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.*;
-import Day6.models.Jobs;
+import java.models.Jobs;
 
 
 import java.util.ArrayList;
@@ -59,7 +59,7 @@ public class JobController {
 
     @POST
     public void insertJob(Jobs jobs) {
-
+ 
         try {
             dao.insertJob(jobs);
         } catch (Exception e) {

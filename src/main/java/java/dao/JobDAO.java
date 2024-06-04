@@ -1,7 +1,7 @@
-package Day6.dao;
+package java.dao;
 
-import Day6.models.Jobs;
-import dto.JobsFilterDto;
+import java.models.Jobs;
+import java.dto.JobsFilterDto;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -70,7 +70,7 @@ public class JobDAO {
             return null;
         }
     }
-
+ 
     public ArrayList<Jobs> selectAllJobs(JobsFilterDto filterDto) throws SQLException, ClassNotFoundException {
         Class.forName("org.sqlite.JDBC");
         Connection conn = DriverManager.getConnection(URL);

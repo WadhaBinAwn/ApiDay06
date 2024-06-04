@@ -1,4 +1,4 @@
-package dto;
+package java.dto;
 
 import jakarta.ws.rs.QueryParam;
 
@@ -7,7 +7,7 @@ public class JobsFilterDto {
    private @QueryParam("min_salary") Double min_salary;
     private @QueryParam("limit") Integer limit;
     private  @QueryParam("offset") int offset;
-
+ 
     public Double getMin_salary() {
         return min_salary;
     }

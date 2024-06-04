@@ -1,7 +1,7 @@
-package java.dao;
+package Day6.dao;
 
-import java.models.Jobs;
-import java.dto.JobsFilterDto;
+import Day6.models.Jobs;
+import Day6.dto.JobsFilterDto;
 
 import java.sql.*;
 import java.util.ArrayList;

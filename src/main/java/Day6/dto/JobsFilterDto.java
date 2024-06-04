@@ -1,4 +1,4 @@
-package java.dto;
+package Day6.dto;
 
 import jakarta.ws.rs.QueryParam;
 

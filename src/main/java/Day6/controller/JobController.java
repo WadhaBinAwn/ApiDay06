@@ -1,10 +1,10 @@
-package java.controller;
+package Day6.controller;
 
-import java.dao.JobDAO;
-import java.dto.JobsFilterDto;
+import Day6.dao.JobDAO;
+import Day6.dto.JobsFilterDto;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.*;
-import java.models.Jobs;
+import Day6.models.Jobs;
 
 
 import java.util.ArrayList;

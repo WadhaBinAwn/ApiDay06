@@ -1,6 +1,7 @@
 package Day6.dao;
 
 import Day6.models.Jobs;
+import dto.JobsFilterDto;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -70,24 +71,24 @@ public class JobDAO {
         }
     }
 
-    public ArrayList<Jobs> selectAllJobs(Double min_salary,Integer limit,int offset) throws SQLException, ClassNotFoundException {
+    public ArrayList<Jobs> selectAllJobs(JobsFilterDto filterDto) throws SQLException, ClassNotFoundException {
         Class.forName("org.sqlite.JDBC");
         Connection conn = DriverManager.getConnection(URL);
         PreparedStatement st;
-        if (min_salary != null && limit!= null){
+        if (filterDto != null && filterDto!= null){
 
             st = conn.prepareStatement(SELECT_Jobs_WITH_Min_PAGINATION);
-        st.setDouble(1,min_salary);
-        st.setInt(2,limit);
-        st.setInt(3,offset);}
-        else if (min_salary!=null) {
+        st.setDouble(1,filterDto.getMin_salary());
+        st.setInt(2,filterDto.getLimit());
+        st.setInt(3,filterDto.getOffset());}
+        else if (filterDto.getMin_salary()!=null) {
             st = conn.prepareStatement(SELECT_Jobs_WITH_Min);
-            st.setDouble(1,min_salary);
+            st.setDouble(1,filterDto.getMin_salary());
             
-        } else if (limit!=null) {
+        } else if (filterDto.getLimit()!=null) {
             st = conn.prepareStatement(SELECT_Jobs_WITH_PAGINATION);
-            st.setInt(1,limit);
-            st.setInt(2,offset);}
+            st.setInt(1,filterDto.getLimit());
+            st.setInt(2,filterDto.getOffset());}
         else{
             st = conn.prepareStatement(SELECT_ALL_JOBS);
 

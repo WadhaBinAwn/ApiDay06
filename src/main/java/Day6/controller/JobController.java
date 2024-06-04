@@ -1,6 +1,7 @@
 package Day6.controller;
 
 import Day6.dao.JobDAO;
+import dto.JobsFilterDto;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.*;
 import Day6.models.Jobs;
@@ -20,13 +21,15 @@ public class JobController {
     @GET
     @Produces({MediaType.APPLICATION_XML,MediaType.APPLICATION_JSON})
 
-    public ArrayList<Jobs> getAllJobs(  @QueryParam("min_salary") Double min_salary,
-                                        @QueryParam("limit") Integer limit,
-                                        @QueryParam("offset") int offset) {
+    public ArrayList<Jobs> getAllJobs( @BeanParam JobsFilterDto filterDto )
+//            @QueryParam("min_salary") Double min_salary,
+//            @QueryParam("limit") Integer limit,
+//            @QueryParam("offset") int offset
+    {
 
 
         try {
-            return dao.selectAllJobs(min_salary,limit,offset);
+            return dao.selectAllJobs(filterDto);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
